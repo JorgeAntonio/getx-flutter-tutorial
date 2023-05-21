@@ -1,25 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:getxtutorial/src/controllers/home_controller.dart';
-// import 'package:getxtutorial/src/views/first_page.dart';
 
-class HomePage extends StatelessWidget {
-  const HomePage({super.key});
+class FirstPage extends StatelessWidget {
+  const FirstPage({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Home Page'),
+        title: const Text('First Page'),
         centerTitle: true,
-        actions: [
-          TextButton(
-            onPressed: () {
-              Get.toNamed('/firstpage');
-            },
-            child: const Text('Next')
-          ),
-        ],
       ),
       body: Center(
         child: Column(
