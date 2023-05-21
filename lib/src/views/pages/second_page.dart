@@ -2,24 +2,20 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:getxtutorial/src/controllers/home_controller.dart';
 
-class FirstPage extends StatelessWidget {
-  FirstPage({super.key});
+class SecondPage extends StatelessWidget {
+  SecondPage({Key? key}) : super(key: key);
 
-  // Get.put (first o I)
-  // Get.put (controller, permanent: true)
-
-  final controller = Get.put(HomeController(), permanent: true);
+  final HomeController controller = Get.find();
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('First Page'),
+        title: const Text('Second Page'),
         centerTitle: true,
       ),
       body: Center(
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
           children: [
             GetBuilder<HomeController>(
               builder: (controller) => Text(
@@ -29,12 +25,11 @@ class FirstPage extends StatelessWidget {
                 textAlign: TextAlign.center,
               ),
             ),
-            const SizedBox(height: 20),
             ElevatedButton(
               onPressed: () {
-                controller.displayName();
+                Get.offAllNamed('/');
               },
-              child: const Text('Display name'),
+              child: const Text('Go to Home Page'),
             ),
           ],
         ),

@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:getxtutorial/src/controllers/home_controller.dart';
 import 'package:getxtutorial/src/views/pages/first_page.dart';
+import 'package:getxtutorial/src/views/pages/second_page.dart';
 // import 'package:getxtutorial/src/views/first_page.dart';
 
 class HomePage extends StatelessWidget {
-  const HomePage({super.key});
+  HomePage({super.key});
 
   /*
 
@@ -15,6 +17,9 @@ class HomePage extends StatelessWidget {
     - It is used only ONE TIME to rebuild the UI or a rebuild a WIDGET when the state changes.
   
   */
+
+  final controller = Get.lazyPut(() => HomeController());
+  final controller1 = Get.put(() => HomeController());
 
   @override
   Widget build(BuildContext context) {
@@ -46,6 +51,12 @@ class HomePage extends StatelessWidget {
                 Get.to(() => FirstPage());
               },
               child: const Text('Go to First Page'),
+            ),
+            ElevatedButton(
+              onPressed: () {
+                Get.to(() => SecondPage());
+              },
+              child: const Text('Go to Second Page'),
             ),
           ],
         ),

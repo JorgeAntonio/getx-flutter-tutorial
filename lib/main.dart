@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:getxtutorial/src/views/pages/first_page.dart';
 import 'package:getxtutorial/src/views/pages/home_page.dart';
+import 'package:getxtutorial/src/views/pages/second_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -17,11 +18,15 @@ class MyApp extends StatelessWidget {
       getPages: [
         GetPage(
             name: '/',
-            page: () => const HomePage(),
+            page: () => HomePage(),
             transition: Transition.rightToLeft),
         GetPage(
             name: '/firstpage',
             page: () => FirstPage(),
+            transition: Transition.rightToLeft),
+        GetPage(
+            name: '/firstpage',
+            page: () => SecondPage(),
             transition: Transition.rightToLeft)
       ],
       debugShowCheckedModeBanner: false,
