@@ -21,7 +21,7 @@ class MyApp extends StatelessWidget {
             transition: Transition.rightToLeft),
         GetPage(
             name: '/firstpage',
-            page: () => const FirstPage(),
+            page: () => FirstPage(),
             transition: Transition.rightToLeft)
       ],
       debugShowCheckedModeBanner: false,
