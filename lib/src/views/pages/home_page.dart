@@ -20,11 +20,22 @@ class HomePage extends StatelessWidget {
             GetBuilder<HomeController>(
               init: HomeController(),
               builder: (controller) {
-                return Text(
-                  controller.name,
-                  style: const TextStyle(
-                      fontSize: 30, fontWeight: FontWeight.bold),
-                  textAlign: TextAlign.center,
+                return Column(
+                  children: [
+                    Text(
+                      controller.index.toString(),
+                      style: const TextStyle(
+                          fontSize: 30, fontWeight: FontWeight.bold),
+                      textAlign: TextAlign.center,
+                    ),
+                    const SizedBox(height: 20),
+                    ElevatedButton(
+                      onPressed: () {
+                        controller.increment();
+                      },
+                      child: const Text('Increment'),
+                    ),
+                  ],
                 );
               },
             ),
