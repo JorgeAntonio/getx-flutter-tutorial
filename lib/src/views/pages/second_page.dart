@@ -25,12 +25,6 @@ class SecondPage extends StatelessWidget {
                 textAlign: TextAlign.center,
               ),
             ),
-            ElevatedButton(
-              onPressed: () {
-                Get.offAllNamed('/');
-              },
-              child: const Text('Go to Home Page'),
-            ),
           ],
         ),
       ),

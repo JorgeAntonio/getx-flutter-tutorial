@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:getxtutorial/src/home_bindig.dart';
 import 'package:getxtutorial/src/views/pages/first_page.dart';
 import 'package:getxtutorial/src/views/pages/home_page.dart';
 import 'package:getxtutorial/src/views/pages/second_page.dart';
@@ -31,6 +32,7 @@ class MyApp extends StatelessWidget {
       ],
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
+      initialBinding: HomeBinding(),
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,

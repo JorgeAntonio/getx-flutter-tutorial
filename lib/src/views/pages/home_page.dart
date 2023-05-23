@@ -1,25 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:getxtutorial/src/controllers/home_controller.dart';
 import 'package:getxtutorial/src/views/pages/first_page.dart';
 import 'package:getxtutorial/src/views/pages/second_page.dart';
-// import 'package:getxtutorial/src/views/first_page.dart';
 
 class HomePage extends StatelessWidget {
-  HomePage({super.key});
+  const HomePage({super.key});
 
-  /*
-
-    Getx like Obx => Like Streaming
-    - Listen to the changes of the state time to time.
-
-    GetBuilder:
-    - It is used only ONE TIME to rebuild the UI or a rebuild a WIDGET when the state changes.
-  
-  */
-
-  final controller = Get.lazyPut(() => HomeController());
-  final controller1 = Get.put(() => HomeController());
 
   @override
   Widget build(BuildContext context) {

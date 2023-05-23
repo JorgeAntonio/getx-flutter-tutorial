@@ -5,10 +5,7 @@ import 'package:getxtutorial/src/controllers/home_controller.dart';
 class FirstPage extends StatelessWidget {
   FirstPage({super.key});
 
-  // Get.put (first o I)
-  // Get.put (controller, permanent: true)
-
-  final controller = Get.put(HomeController(), permanent: true);
+  final HomeController controller = Get.find();
 
   @override
   Widget build(BuildContext context) {
