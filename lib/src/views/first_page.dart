@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:getxtutorial/component.dart';
 import 'package:getxtutorial/src/controllers/home_controller.dart';
 
 class FirstPage extends StatefulWidget {
