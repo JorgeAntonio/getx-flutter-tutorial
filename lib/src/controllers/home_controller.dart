@@ -15,7 +15,7 @@ class HomeController extends GetxController {
 
   void displayName() {
     name = 'Jorge';
-    //This is used to save the dara
+    //This is used to save the data
     box.write('name', name);
     update();
   }
