@@ -34,9 +34,21 @@ class _FirstPageState extends State<FirstPage> {
             const SizedBox(height: 20),
             ElevatedButton(
               onPressed: () {
+                controller.getTheSavedName();
+              },
+              child: const Text('get name'),
+            ),
+            ElevatedButton(
+              onPressed: () {
+                controller.deleteSavedName();
+              },
+              child: const Text('delete name'),
+            ),
+            ElevatedButton(
+              onPressed: () {
                 controller.displayName();
               },
-              child: const Text('Display name'),
+              child: const Text('display name'),
             ),
           ],
         ),

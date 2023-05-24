@@ -1,8 +1,11 @@
 import 'package:get/get.dart';
+import 'package:get_storage/get_storage.dart';
 
 class HomeController extends GetxController {
   String name = '';
   RxInt index = 0.obs;
+
+  GetStorage box = GetStorage();
 
   void increment() {
     index.value++;
@@ -12,6 +15,20 @@ class HomeController extends GetxController {
 
   void displayName() {
     name = 'Jorge';
+    //This is used to save the dara
+    box.write('name', name);
+    update();
+  }
+
+  void getTheSavedName() {
+    String name = box.read("name") ?? "Deleted";
+    print(name);
+    update();
+  }
+
+  void deleteSavedName() {
+    box.remove("name");
+    print('It is removed');
     update();
   }
 

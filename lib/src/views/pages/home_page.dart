@@ -37,7 +37,7 @@ class HomePage extends StatelessWidget {
             const SizedBox(height: 20),
             ElevatedButton(
               onPressed: () {
-                Get.to(() => FirstPage());
+                Get.to(() => const FirstPage());
               },
               child: const Text('Go to First Page'),
             ),

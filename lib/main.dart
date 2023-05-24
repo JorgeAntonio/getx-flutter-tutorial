@@ -1,13 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:get_storage/get_storage.dart';
 import 'package:getxtutorial/src/home_bindig.dart';
 import 'package:getxtutorial/src/views/pages/first_page.dart';
 import 'package:getxtutorial/src/views/pages/home_page.dart';
 import 'package:getxtutorial/src/views/pages/second_page.dart';
 
-void main() {
+void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   HomeBinding().dependencies();
+  await GetStorage.init();
   runApp(const MyApp());
 }
 
@@ -25,7 +27,7 @@ class MyApp extends StatelessWidget {
             transition: Transition.rightToLeft),
         GetPage(
             name: '/firstpage',
-            page: () => FirstPage(),
+            page: () => const FirstPage(),
             transition: Transition.rightToLeft),
         GetPage(
             name: '/firstpage',

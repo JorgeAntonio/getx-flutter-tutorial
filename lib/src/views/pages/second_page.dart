@@ -15,7 +15,7 @@ class SecondPage extends StatelessWidget {
         title: const Text('Second Page'),
         centerTitle: true,
       ),
-      body: Column(
+      body: const Column(
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [],
