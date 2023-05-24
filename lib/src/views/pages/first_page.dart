@@ -3,7 +3,7 @@ import 'package:get/get.dart';
 import 'package:getxtutorial/src/controllers/home_controller.dart';
 
 class FirstPage extends StatefulWidget {
-  FirstPage({super.key});
+  const FirstPage({super.key});
 
   @override
   State<FirstPage> createState() => _FirstPageState();

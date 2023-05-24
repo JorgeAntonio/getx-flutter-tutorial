@@ -1,13 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:getxtutorial/src/controllers/home_controller.dart';
+import 'package:getxtutorial/src/controllers/second_controller.dart';
 import 'package:getxtutorial/src/views/pages/first_page.dart';
 import 'package:getxtutorial/src/views/pages/second_page.dart';
 
 class HomePage extends StatelessWidget {
   HomePage({super.key});
 
-  // final controller = Get.lazyPut(() => HomeController(), fenix: true);
+  final SecondController controller = Get.find();
+  final HomeController controller2 = Get.find();
 
   @override
   Widget build(BuildContext context) {
@@ -29,8 +31,7 @@ class HomePage extends StatelessWidget {
           children: [
             const Text(
               'Getx Tutorial',
-              style: TextStyle(
-                  fontSize: 30, fontWeight: FontWeight.bold),
+              style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
               textAlign: TextAlign.center,
             ),
             const SizedBox(height: 20),

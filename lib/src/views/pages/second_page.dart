@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:getxtutorial/src/controllers/home_controller.dart';
+import 'package:getxtutorial/src/controllers/second_controller.dart';
 
 class SecondPage extends StatelessWidget {
   SecondPage({Key? key}) : super(key: key);
 
-  final HomeController controller = Get.find();
+  final SecondController controller = Get.find();
 
   @override
   Widget build(BuildContext context) {
@@ -14,19 +15,10 @@ class SecondPage extends StatelessWidget {
         title: const Text('Second Page'),
         centerTitle: true,
       ),
-      body: Center(
-        child: Column(
-          children: [
-            GetBuilder<HomeController>(
-              builder: (controller) => Text(
-                controller.name,
-                style:
-                    const TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
-                textAlign: TextAlign.center,
-              ),
-            ),
-          ],
-        ),
+      body: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: [],
       ),
     );
   }

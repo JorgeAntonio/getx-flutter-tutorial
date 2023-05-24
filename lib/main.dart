@@ -6,6 +6,8 @@ import 'package:getxtutorial/src/views/pages/home_page.dart';
 import 'package:getxtutorial/src/views/pages/second_page.dart';
 
 void main() {
+  WidgetsFlutterBinding.ensureInitialized();
+  HomeBinding().dependencies();
   runApp(const MyApp());
 }
 
