@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
-import 'package:getxtutorial/localizations/app_localization.dart';
-import 'package:getxtutorial/src/home_bindig.dart';
-import 'package:getxtutorial/src/views/pages/first_page.dart';
-import 'package:getxtutorial/src/views/pages/home_page.dart';
-import 'package:getxtutorial/src/views/pages/second_page.dart';
+import 'package:getxtutorial/src/localizations/app_localization.dart';
+import 'package:getxtutorial/src/views/home_bindig.dart';
+import 'package:getxtutorial/src/views/first_page.dart';
+import 'package:getxtutorial/src/views/home_page.dart';
+import 'package:getxtutorial/src/views/second_page.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -21,8 +21,6 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    print(box.read("lang"));
-
     return GetMaterialApp(
       initialRoute: '/',
       title: 'Flutter Demo',

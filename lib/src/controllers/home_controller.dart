@@ -1,11 +1,15 @@
 import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
+import 'package:getxtutorial/src/models/news_model.dart';
+import 'package:getxtutorial/src/services/news_service.dart';
 
 class HomeController extends GetxController {
   String name = '';
   RxInt index = 0.obs;
 
   GetStorage box = GetStorage();
+
+  get list => null;
 
   void increment() {
     index.value++;
@@ -34,9 +38,17 @@ class HomeController extends GetxController {
 
   @override
   void onInit() {
+    getNewsData();
     // when you open the screen
     print('onInit');
     super.onInit();
+  }
+
+  NewsApi? newsApi;
+  void getNewsData() async {
+    newsApi = await NewsService().getNewsData();
+    // set update if it's necessary
+    update();
   }
 
   @override
